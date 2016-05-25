@@ -1,5 +1,7 @@
 //Variable que se movera entre ambos arreglos
 var azar; 
+var puntos = 0;
+var intentos = 0;
 //Arreglo de fotos//
 var personas = [
  "Ana.jpg", "Analy.jpg", 
@@ -32,7 +34,7 @@ var nombres = [
  "Ofelia", "Patricia", 
  "Sharon", "Heredia", 
  "Karen", "Monica",  
- "Karla", "Leslie.", 
+ "Karla", "Leslie", 
  "Mishel", "Milca", 
  "Tayde", "Naibit", 
  "Nayeli", "Nelly", 
@@ -91,6 +93,15 @@ $(document).ready(function(){
        }
   });
 
+//Contador//
+function  desplegarpuntos(){
+  $('#puntos').text(puntos)
+}
+//Intentos//
+function numerodeintentos(){
+  $('#intentos').text('te quedan ' + intentos);
+}
+ 
 //Iniciar todo el DOM y verificar la correspondencia de texto y mandar error 
 //si el usuario se equivoca
 $(document).ready(function(){
@@ -103,19 +114,23 @@ $(document).ready(function(){
       console.log('El nombre correcto es: ' + nombreAdivinar);
 
       if (nombre === nombreAdivinar){
+        puntos = puntos + 5;
         //quitamos el elemento que ya paso//
           nombres.splice(azar,1);
           personas.splice(azar,1);
          nuevaPartida();
+
        }else{
         alert('Error, no olvides las mayusculas')
+        puntos = puntos -1;
+        intentos = intentos +1;
        }
-    });
-      nuevaPartida();
+        desplegarpuntos();
+    });   
+        nuevaPartida();
   });
 
 
- 
 
     
 
