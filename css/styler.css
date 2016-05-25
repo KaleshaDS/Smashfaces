@@ -1,0 +1,52 @@
+/*propiedad del body*/
+.container{
+	width: 700px;
+	margin: auto;		
+}
+/*Foto*/
+#grupal img{
+	height:500px;		
+	width: 700px;
+}
+/*Introduccion*/
+h2,p{
+	text-align: center;
+	font-family: serif;	
+	width:500px;
+	height: 100px;
+	padding-left: 100px;
+	margin: 10px;
+}
+/*Propiedades de lineas*/
+hr {
+	border: 0;
+	border-top: 3px solid gray; 
+	width: 100px;
+	opacity:0.6;
+ }
+ /*Dropdrown*/
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #ffc829;
+    border: solid 1px #CCA020;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+
+.dropdown{
+	cursor: pointer;
+}
+
+li, a{
+	list-style-type: none;
+	text-decoration: none;
+	color: #000;
+	font-size: 20px;
+}
+a:hover{
+	color: #
+}
